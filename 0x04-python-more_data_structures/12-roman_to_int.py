@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if roman_string == None:
-        return (None)
-    if roman_string < chr(0) and roman_string > chr(128):
-        return (None)
+        return (0)
+    if type(roman_string) != str:
+        return (0)
     length = len(roman_string)
     num = 0
     for i in range(0, length):
