@@ -8,8 +8,7 @@ def safe_print_list(my_list=[], x=0):
         try:
            print("{:d}".format(my_list[i]), end="")
            b = b + 1
-           if i == x - 1 or i == a - 1:
-               print()
         except IndexError:
             break
+    print()
     return (b)
