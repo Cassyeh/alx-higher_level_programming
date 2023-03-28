@@ -6,8 +6,8 @@ def safe_print_list(my_list=[], x=0):
         a = a + 1
     for i in range(0, x):
         try:
-           print("{:d}".format(my_list[i]), end="")
-           b = b + 1
+            print("{:d}".format(my_list[i]), end="")
+            b = b + 1
         except IndexError:
             break
     print()
