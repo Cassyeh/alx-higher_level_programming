@@ -24,9 +24,22 @@ class Square:
         self.__position = position
         if type(position) != tuple:
             raise TypeError("position must be a tuple of 2 positive numbers")
-        if position[0] < 0:
-            raise TypeError("position must be a tuple of 2 positive numbers")
-        if position[1] < 0:
+        if len(position) == 2:
+            if type(position[0]) == int:
+                if position[0] < 0:
+                    raise TypeError("position must be a tuple of 2 positive\
+                            numbers")
+            else:
+                raise TypeError("position must be a tuple of 2 positive\
+                        numbers")
+            if type(position[1]) == int:
+                if position[1] < 0:
+                    raise TypeError("position must be a tuple of 2 positive\
+                            numbers")
+            else:
+                raise TypeError("position must be a tuple of 2 positive\
+                        numbers")
+        elif len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive numbers")
 
     @property
@@ -68,7 +81,7 @@ class Square:
             for j in range(0, self.size):
                 if c == 0:
                     for k in range(0, self.position[0]):
-                        print("_", end="")
+                        print(" ", end="")
                         c = c + 1
                 print("#", end="")
                 if j == self.size - 1:
