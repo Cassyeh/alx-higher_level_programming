@@ -22,6 +22,12 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
+        if type(position) != tuple:
+            raise TypeError("position must be a tuple of 2 positive numbers")
+        if position[0] < 0:
+            raise TypeError("position must be a tuple of 2 positive numbers")
+        if position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive numbers")
 
     @property
     def size(self):
