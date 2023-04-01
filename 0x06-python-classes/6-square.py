@@ -75,7 +75,7 @@ class Square:
         for i in range(0, self.size):
             if a == 0:
                 for h in range(0, self.position[1]):
-                    print()
+                    print("")
                     a = a + 1
             c = 0
             for j in range(0, self.size):
