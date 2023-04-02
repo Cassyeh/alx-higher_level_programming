@@ -22,23 +22,20 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
+        message = "position must be a tuple of 2 positive integers"
         if type(position) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(position) == 2:
             if type(position[0]) == int:
                 if position[0] < 0:
-                    raise TypeError("position must be a tuple of 2 positive" +\
-                            " integers")
+                    raise TypeError(message)
             else:
-                raise TypeError("position must be a tuple of 2 positive" +\
-                       " integers")
+                raise TypeError(message)
             if type(position[1]) == int:
                 if position[1] < 0:
-                    raise TypeError("position must be a tuple of 2 positive" +\
-                            " integers")
+                    raise TypeError(message)
             else:
-                raise TypeError("position must be a tuple of 2 positive" +\
-                        " integers")
+                raise TypeError(message)
         elif len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
 
