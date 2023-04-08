@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Module
+Refer to the documentation provided in the README.md
+"""
+
+
 def add_integer(a, b=98):
     """
     Addition function
