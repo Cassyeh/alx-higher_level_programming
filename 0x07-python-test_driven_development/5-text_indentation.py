@@ -6,7 +6,7 @@ Please refer to the documentation in the README.md
 
 
 def text_indentation(text):
-     """
+    """
     A simple function that prints a text with 2 new lines 
     after each of these characters: ., ? and :
 
