@@ -17,6 +17,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(new_list), None)
         new_list = [0]
         self.assertEqual(max_integer(new_list), 0)
+        new_list = [1]
+        self.assertEqual(max_integer(new_list), 2)
         new_list = [0, 2, 1]
         self.assertEqual(max_integer(new_list), 2)
         new_list = [-1, -1]
