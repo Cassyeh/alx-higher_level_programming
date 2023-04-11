@@ -18,15 +18,23 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    a = 0
-    for i in text:
-        if i == '.' or i == '?' or i == ':':
-            print("{:s}\n".format(i))
-            a = a + 1
-            continue
-        if text[a - 1] == '.' or text[a - 1] == '?' or text[a - 1] == ':':
-            if i == ' ':
-                a = a + 1
-                continue
-        print("{:s}".format(i), end="")
-        a = a + 1
+    length = len(text)
+    i = 0
+    while i < length:
+        if text[i] == '.' or text[i] == '?' or text[i] == ':':
+            print("{:s}\n".format(text[i]))
+            i = i + 1
+        elif text[i] == ' ':
+            for j in range(i, length):
+                if text[j] != ' ':
+                    break
+            letter = text[i - 1]
+            if letter == '.' or letter == '?' or letter == ':':
+                for k in range(i, j):
+                    i = i + 1
+            else:
+                print("{:s}".format(text[i]), end="")
+                i = i + 1
+        else:
+            print("{:s}".format(text[i]), end="")
+            i = i + 1
