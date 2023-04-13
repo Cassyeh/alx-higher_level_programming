@@ -36,4 +36,9 @@ First, let's import the functions:
 [0, 0]
 >>> print(my_list)
 [0, 0]
-
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+>>> my_list = MyList([-1])
+>>> my_list.print_sorted()
+[-1]
