@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Module 0-square
-Defines class Square
+Module
+Please refer to the documentation in the README.md
 """
 
 
