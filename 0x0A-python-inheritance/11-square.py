@@ -14,21 +14,19 @@ class Square(Rectangle):
         """
         Instantiation with size
         """
-        self.__width = size
-        self.__height = size
-        self.integer_validator("width", self.__width)
-        self.integer_validator("height", self.__height)
+        self.__size = size
+        self.integer_validator("width", self.__size)
 
     def area(self):
         """
         A function that calculates area
         """
-        area = self.__width * self.__height
+        area = self.__size * self._size
         return area
 
     def __str__(self):
         """
         Prints the class
         """
-        msg = "[Square] {}/{}".format(self.__width, self.__height)
+        msg = "[Square] {}/{}".format(self.__size, self.__size)
         return msg
