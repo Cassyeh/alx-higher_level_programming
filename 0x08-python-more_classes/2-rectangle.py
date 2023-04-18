@@ -10,6 +10,10 @@ class Rectangle:
     A class with Private instance attribute: width
     Private instance attribute: height
     and property setters for width and height
+    with Public instance method: def area(self):
+    that returns the rectangle area and
+    Public instance method: def perimeter(self):
+    that returns the rectangle perimeter
     """
     def __init__(self, width=0, height=0):
         self.__height = height
@@ -54,3 +58,14 @@ class Rectangle:
             msg = "height must be >= 0"
             raise ValueError(msg)
         self.__height = value
+
+    def area(self):
+        return (self.__width * self.__height)
+
+    def perimeter(self):
+        perim = 2 * (self.__width + self.__height)
+        if self.__width == 0:
+            perim = 0
+        if self.__height == 0:
+            perim = 0
+        return (perim)
