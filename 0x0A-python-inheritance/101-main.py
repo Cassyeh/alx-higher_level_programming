@@ -15,3 +15,12 @@ try:
     print(a.name)
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
+class MyClass():
+    slots = ["first_name"]
+    pass
+a = MyClass ()
+try:
+    add_attribute(a, "hbtn", "Holberton")
+    print(a.name)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
