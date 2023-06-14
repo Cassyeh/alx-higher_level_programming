@@ -16,7 +16,7 @@ if (process.argv.length === 2) {
       num = arr[i];
     }
   }
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < arr.length ; i++) {
     if (arr[i] == num) {
       continue;
     } else {
@@ -24,7 +24,7 @@ if (process.argv.length === 2) {
         break;
     }
   }
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < arr.length; i++) {
     if (arr[i] == num) {
       continue;
     } else {
