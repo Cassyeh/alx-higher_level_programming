@@ -15,7 +15,8 @@ if __name__ == '__main__':
             passwd=argv[2], db=argv[3])
 
     cursor = db_connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'ORDER BY id ASC")
+    qry = "SELECT * FROM states WHERE name LIKE BINARY 'N%'ORDER BY id ASC"
+    cursor.execute(qry)
     for rows in cursor.fetchall():
         print(rows)
     db_connection.close()

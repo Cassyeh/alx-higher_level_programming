@@ -15,7 +15,7 @@ if __name__ == '__main__':
             passwd=argv[2], db=argv[3])
 
     cursor = db_connection.cursor()
-    msg = """SELECT * FROM states WHERE name LIKE '{:s}'
+    msg = """SELECT * FROM states WHERE name LIKE BINARY '{:s}'
     ORDER BY id ASC""".format(argv[4])
     cursor.execute(msg)
     for rows in cursor.fetchall():
