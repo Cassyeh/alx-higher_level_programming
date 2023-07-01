@@ -1,16 +1,18 @@
 #!/usr/bin/node
 const dict = require('./101-data').dict;
 const vals = Object.values(dict);
-const myArr = [vals[[0]]];
-let i;
-let j;
-for (i = 0; i < vals.length; i++) {
-  if (myArr.includes(vals[i]) === true) {
-    continue;
+if (vals.length != 0) {
+  const myArr = [vals[[0]]];
+  let i;
+  let j;
+  for (i = 0; i < vals.length; i++) {
+    if (myArr.includes(vals[i]) === true) {
+      continue;
+    }
+    myArr.push(vals[i]);
   }
-  myArr.push(vals[i]);
+  const keys = Object.keys(dict);
 }
-const keys = Object.keys(dict);
 if (vals.length !== 0) {
   const newDict = {};
   for (j = 0; j < myArr.length; j++) {
