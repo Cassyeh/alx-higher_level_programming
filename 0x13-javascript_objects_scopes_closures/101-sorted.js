@@ -13,17 +13,15 @@ for (i = 0; i < vals.length; i++) {
 const keys = Object.keys(dict);
 if (vals.length !== 0) {
   const newDict = {};
-}
-for (j = 0; j < myArr.length; j++) {
-  newDict[myArr[j]] = [];
-}
-for (i = 0; i < vals.length; i++) {
   for (j = 0; j < myArr.length; j++) {
-    if (dict[keys[i]] === myArr[j]) {
-      newDict[myArr[j]].push(keys[i]);
+    newDict[myArr[j]] = [];
+  }
+  for (i = 0; i < vals.length; i++) {
+    for (j = 0; j < myArr.length; j++) {
+      if (dict[keys[i]] === myArr[j]) {
+        newDict[myArr[j]].push(keys[i]);
+      }
     }
   }
-}
-if (vals.length !== 0) {
   console.log(newDict);
 }
