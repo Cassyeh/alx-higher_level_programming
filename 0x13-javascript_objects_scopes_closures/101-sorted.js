@@ -24,4 +24,6 @@ for (i = 0; i < vals.length; i++) {
     }
   }
 }
-console.log(newDict);
+if (vals.length !== 0) {
+  console.log(newDict);
+}
