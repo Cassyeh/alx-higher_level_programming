@@ -11,7 +11,9 @@ for (i = 0; i < vals.length; i++) {
   myArr.push(vals[i]);
 }
 const keys = Object.keys(dict);
-const newDict = {};
+if (vals.length !== 0) {
+  const newDict = {};
+}
 for (j = 0; j < myArr.length; j++) {
   newDict[myArr[j]] = [];
 }
